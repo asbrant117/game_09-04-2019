@@ -1,10 +1,10 @@
-import sys  # ?
+import sys
 import pygame
 from settings import Settings
 from hero import Hero
 import game_functiun
 from pygame.sprite import Group
-from Сreate_chatacters import create_chatacters
+from create_chatacters import create_chatacters
 
 
 def run_game():
@@ -35,7 +35,7 @@ def run_game():
     while True:
 
         # обновление песонажей
-        if len(characters) < 100:
+        if len(characters) < 60:
             # размещение группы персонажей
             create_chatacters(all_settings, screen, characters, hero)
         # события

@@ -1,8 +1,8 @@
 import sys
 import pygame
 from time import sleep
-from Сheck_keydown_events import check_keydown_events
-from Check_keyup_events import check_keyup_events
+from check_keydown_events import check_keydown_events
+from check_keyup_events import check_keyup_events
 
 
 

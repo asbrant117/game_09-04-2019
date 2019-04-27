@@ -18,7 +18,7 @@ class Hero(pygame.sprite.Sprite, animation.Animation):
 
         # изображение героя и выделенный прямоугольник
         self.image = self.animation_hero_stay_down  #
-        self.rect = pygame.Rect(self.all_settings.x, self.all_settings.y, 80, 80)
+        self.rect = pygame.Rect(self.all_settings.x, self.all_settings.y, 38, 70)
 
         # координаты расположения
         self.rect.x = self.all_settings.x

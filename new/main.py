@@ -4,6 +4,7 @@ from settings import Settings
 from hero import Hero
 import game_functiun
 from pygame.sprite import Group
+from Сreate_chatacters import create_chatacters
 
 
 def run_game():
@@ -23,9 +24,6 @@ def run_game():
     # создание группы персонажей
     characters = Group()
 
-
-
-
     # создание группы для хранения пуль
     bullets = Group()
     bullets_right = bullets.copy()  # ?
@@ -37,12 +35,11 @@ def run_game():
     while True:
 
         # обновление песонажей
-        if len(characters) == 0:
+        if len(characters) < 100:
             # размещение группы персонажей
-            game_functiun.create_chatacters(all_settings, screen, characters)
+            create_chatacters(all_settings, screen, characters, hero)
         # события
-        game_functiun.check_events(all_settings, screen, hero, bullets_right, bullets_left, bullets_up,
-                                   bullets_down)
+        game_functiun.check_events(all_settings, screen, hero, bullets_right, bullets_left, bullets_up, bullets_down)
         # обновление
         # герой
         hero.update_hero(dt)
